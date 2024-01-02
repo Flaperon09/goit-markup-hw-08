@@ -1,0 +1,58 @@
+// Стилизация футера
+.footer {
+    background-color: $bkg-header;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer__module {
+    display: flex;
+    position: relative;
+    align-items: baseline;
+}
+
+.footer__contacts {
+    width: 231px;
+}
+
+// Стилизация логотипа футера
+.footer__logo {
+    display: block;
+    margin-bottom: 20px;
+    color: $color-white;
+
+    text-decoration: none;
+    font-family: $font-logo, $font-aux;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.78px;
+    margin-right: 93px;
+}
+
+.footer__logo__start {
+    color: $color-accent;
+}
+
+// Стилизация адреса в футере
+.address {
+    color: $color-white;
+    font-style: normal;
+
+    a {
+        display: block;
+        color: $footer-contacts;
+        text-decoration: none;
+        margin-top: 9px;
+    
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    & a:hover,
+    & a:focus {
+        color: $color-accent;
+    }
+}

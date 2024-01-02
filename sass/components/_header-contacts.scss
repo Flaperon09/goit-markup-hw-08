@@ -1,0 +1,45 @@
+// Стилизация контактов
+.nav__contacts {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    // Правый отступ для ссылок, кроме крайнего
+    .nav__item:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+.nav__link {
+    // @extend .nav - добавление стилей из селектора nav (_header-nav.scss)
+    @extend .nav;
+    &:hover,
+    &:focus {
+        color: $color-accent;
+    }
+    &:hover .nav__email,
+    &:focus .nav__email,
+    &:hover .nav__number,
+    &:focus .nav__number {
+        fill: $color-accent;
+    }
+}
+
+.nav__email {
+    display: inline-flex;
+    margin-right: 10px;
+    fill: $color;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        fill: $color-accent;
+    }
+    
+}
+
+.nav__number {
+    @extend .nav__email;
+}

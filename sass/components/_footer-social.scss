@@ -1,0 +1,41 @@
+// Стилизация соцсетей в футере
+
+// Стиль .social-card находится в паршине _index-team-social.scss
+// Стиль .social-element находится в паршине _index-team-social.scss
+// Стиль .social-link находится в паршине _index-team-social.scss
+// Стиль .social-item находится в паршине _index-team-social.scss
+
+.footer__social {
+    margin-left: 70px;
+}
+
+.footer__text {
+    display: flex;
+    color: $color-white;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.footer__social .social__link {
+    width: 44px;
+    height: 44px;
+    background-color: $footer-icons;
+    border-radius: 50%;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: $color-accent;
+    }
+}
+
+.footer__social .social__item {
+    fill: $color-white;
+}

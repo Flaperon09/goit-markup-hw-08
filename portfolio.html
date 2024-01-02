@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфоліо</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    />
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <!--Заголовок-->
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a href="./index.html" class="header__logo list">
+            <span class="header__logo__start">Web</span>Studio
+          </a>
+          <ul class="nav__element list">
+            <li class="nav__item">
+              <a href="./index.html">Студія</a>
+            </li>
+            <li class="nav__item">
+              <a href="./portfolio.html" class="nav__current">Портфоліо</a>
+            </li>
+            <li class="nav__item"><a href="">Контакти</a></li>
+          </ul>
+        </nav>
+        <ul class="nav__contacts list">
+          <li class="nav__item">
+            <a href="mailto:info@devstudio.com" class="nav__link">
+              <svg class="nav__email" width="16px" height="12px">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="tel:+380961111111" class="nav__link">
+              <svg class="nav__number" width="10px" height="16px">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!--Основная часть-->
+    <main>
+      <section class="examples">
+        <h1 class="visually__hidden">Примеры</h1>
+        <div class="container">
+          <ul class="nav__portfolio list">
+            <li class="nav__button">
+              <button type="button" class="nav__items first">Усі</button>
+            </li>
+            <li class="nav__button">
+              <button type="button" class="nav__items">Веб-сайти</button>
+            </li>
+            <li class="nav__button">
+              <button type="button" class="nav__items">Додатки</button>
+            </li>
+            <li class="nav__button">
+              <button type="button" class="nav__items">Дизайн</button>
+            </li>
+            <li class="nav__button">
+              <button type="button" class="nav__items">Маркетинг</button>
+            </li>
+          </ul>
+          <ul class="projects list">
+            <li class="projects__card">
+              <a href="" class="projects__link">
+                <div class="box__img">
+                  <img
+                    src="./images/notebook.jpg"
+                    class="projects__img"
+                    alt="Ноутбук"
+                    width="370"
+                  />
+                  <p class="projects__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Beatae id neque voluptatem vel excepturi corrupti, pariatur,
+                    aut, a at sit qui quod tempora. Quis quo, totam consectetur
+                    eius hic vero!
+                  </p>
+                </div>
+                <div class="projects__label">
+                  <h2 class="projects__h2">Технокряк</h2>
+                  <p class="projects__chapter">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__card">
+              <a href="" class="projects__link">
+                <div class="box__img">
+                  <img
+                    src="./images/basketball.jpg"
+                    class="projects__img"
+                    alt="Баскетбол"
+                    width="370"
+                  />
+                  <p class="projects__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Beatae id neque voluptatem vel excepturi corrupti, pariatur,
+                    aut, a at sit qui quod tempora. Quis quo, totam consectetur
+                    eius hic vero!
+                  </p>
+                </div>
+                <div class="projects__label">
+                  <h2 class="projects__h2">Постер New Orlean vs Golden Star</h2>
+                  <p class="projects__chapter">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__card">
+              <a href="" class="projects__link">
+                <div class="box__img">
+                  <img
+                    src="./images/logo.jpg"
+                    class="projects__img"
+                    alt="Логотип"
+                    width="370"
+                  />
+                  <p class="projects__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Beatae id neque voluptatem vel excepturi corrupti, pariatur,
+                    aut, a at sit qui quod tempora. Quis quo, totam consectetur
+                    eius hic vero!
+                  </p>
+                </div>
+                <div class="projects__label">
+                  <h2 class="projects__h2">Ресторан Seafood</h2>
+                  <p class="projects__chapter">Додаток</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__card">
+              <a href="" class="projects__link">
+                <div class="box__img">
+                  <img
+                    src="./images/headphones.jpg"
+                    alt="Наушники"
+                    width="370"
+                  />
+                  <div class="projects__img">
+                    <p class="projects__text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Beatae id neque voluptatem vel excepturi corrupti,
+                      pariatur, aut, a at sit qui quod tempora. Quis quo, totam
+                      consectetur eius hic vero!
+                    </p>
+                  </div>
+                </div>
+                <div class="projects__label">
+                  <h2 class="projects__h2">Проєкт Prime</h2>
+                  <p class="projects__chapter">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__card">
+              <a href="" class="projects__link">
+                <div class="box__img">
+                  <img
+                    src="./images/boxes.jpg"
+                    class="projects__img"
+                    alt="Коробки"
+                    width="370"
+                  />
+                  <p class="projects__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Beatae id neque voluptatem vel excepturi corrupti, pariatur,
+                    aut, a at sit qui quod tempora. Quis quo, totam consectetur
+                    eius hic vero!
+                  </p>
+                </div>
+                <div class="projects__label">
+                  <h2 class="projects__h2">Проєкт Boxes</h2>
+                  <p class="projects__chapter">Додаток</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__card">
+              <a href="" class="projects__link">
+                <div class="box__img">
+                  <img
+                    src="./images/monitor.jpg"
+                    class="projects__img"
+                    alt="Монитор"
+                    width="370"
+                  />
+                  <p class="projects__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Beatae id neque voluptatem vel excepturi corrupti, pariatur,
+                    aut, a at sit qui quod tempora. Quis quo, totam consectetur
+                    eius hic vero!
+                  </p>
+                </div>
+                <div class="projects__label">
+                  <h2 class="projects__h2">Inspiration has no Borders</h2>
+                  <p class="projects__chapter">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__card">
+              <a href="" class="projects__link">
+                <div class="box__img">
+                  <img
+                    src="./images/book.jpg"
+                    class="projects__img"
+                    alt="Книга"
+                    width="370"
+                  />
+                  <p class="projects__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Beatae id neque voluptatem vel excepturi corrupti, pariatur,
+                    aut, a at sit qui quod tempora. Quis quo, totam consectetur
+                    eius hic vero!
+                  </p>
+                </div>
+                <div class="projects__label">
+                  <h2 class="projects__h2">Видання Limited Edition</h2>
+                  <p class="projects__chapter">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__card">
+              <a href="" class="projects__link">
+                <div class="box__img">
+                  <img
+                    src="./images/label.jpg"
+                    class="projects__img"
+                    alt="Бирка"
+                    width="370"
+                  />
+                  <p class="projects__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Beatae id neque voluptatem vel excepturi corrupti, pariatur,
+                    aut, a at sit qui quod tempora. Quis quo, totam consectetur
+                    eius hic vero!
+                  </p>
+                </div>
+                <div class="projects__label">
+                  <h2 class="projects__h2">Проєкт LAB</h2>
+                  <p class="projects__chapter">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__card">
+              <a href="" class="projects__link">
+                <div class="box__img">
+                  <img
+                    src="./images/business.jpg"
+                    class="projects__img"
+                    alt="Бизнес"
+                    width="370"
+                  />
+                  <p class="projects__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Beatae id neque voluptatem vel excepturi corrupti, pariatur,
+                    aut, a at sit qui quod tempora. Quis quo, totam consectetur
+                    eius hic vero!
+                  </p>
+                </div>
+                <div class="projects__label">
+                  <h2 class="projects__h2">Growing Business</h2>
+                  <p class="projects__chapter">Додаток</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!--Футер-->
+    <footer class="footer">
+      <div class="container footer__module">
+        <div class="footer__contacts">
+          <a href="" class="footer__logo list">
+            <span class="footer__logo__start">Web</span>Studio
+          </a>
+          <address class="address list">
+            м. Київ, пр-т Лесі Українки, 26
+            <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+            <a href="tel:+380961111111">+38 096 111 11 11</a>
+          </address>
+        </div>
+        <div class="footer__social">
+          <p class="footer__text">приєднуйтесь</p>
+          <ul class="social__card list">
+            <li class="social__element">
+              <a href="" class="social__link">
+                <svg class="social__item" width="20px" height="20px">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__element">
+              <a href="" class="social__link">
+                <svg class="social__item" width="20px" height="20px">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__element">
+              <a href="" class="social__link">
+                <svg class="social__item" width="20px" height="20px">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__element">
+              <a href="" class="social__link">
+                <svg class="social__item" width="20px" height="20px">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <form class="footer__submit">
+          <label for="footer-input" class="footer__text">
+            Підпишіться на розсилку
+          </label>
+          <div class="footer__email">
+            <input
+              class="footer__input"
+              type="email"
+              name="email"
+              id="footer-input"
+              placeholder="E-mail"
+            />
+            <button class="footer__button" type="submit">
+              Підписатися
+              <span class="button__send">
+                <svg class="button__icon" width="24px" height="24px">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </footer>
+  </body>
+</html>

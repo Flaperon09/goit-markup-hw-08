@@ -1,0 +1,67 @@
+// Стилизация навигации по сайту
+.nav {
+    display: flex;
+    align-items: center;
+
+    color: $color;
+    text-decoration: none;
+
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.28px;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav__element {
+    display: flex;
+    a {
+        display: block;
+            
+        color: $color-header;
+        text-decoration: none;
+            
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.28px;
+            
+        padding-top: 32px;
+        padding-bottom: 32px;
+            
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    // Правый отступ для меню, кроме крайнего пункта
+    .nav__item:not(:last-child) {
+        margin-right: 50px;
+    }
+    & a:hover,
+    & a:focus,
+    & a.nav__current {
+        color: $color-accent;
+    
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.28px;
+    }
+}
+
+.nav__item {
+    position: relative;
+}
+
+// Стилизация линии подчеркивания активного пункта меню
+.nav__current::after {
+    display: block;
+    position: absolute;
+    bottom: 0;
+
+    content: '';
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: $color-accent;
+}

@@ -1,0 +1,55 @@
+// Стилизация иконок соцсетей
+.social__card {
+    display: flex;
+
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.social__element {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.social__link {
+    display: flex;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $color-white;
+
+    align-items: center;
+    justify-content: center;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: $color-accent;
+        border-radius: 50%;
+    
+    }
+
+    &:hover .social__item,
+    &:focus .social__item {
+        fill: $color-white;
+    }
+}
+
+.social__item {
+    display: flex;
+    fill: $color-border-logo;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

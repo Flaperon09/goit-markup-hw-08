@@ -1,0 +1,9 @@
+// Нижняя линия в хедере
+.header {
+    border-bottom: 1px solid $line;
+    // Стилизация контейнера в хедере
+    .container {
+            display: flex;
+            align-items: center;
+        }
+}
