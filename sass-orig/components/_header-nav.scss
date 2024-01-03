@@ -13,15 +13,10 @@
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-    @media screen and (max-width: 767px) {
-        justify-content: space-between;
-    }
 }
 
 .nav__element {
-    display: none;
-
+    display: flex;
     a {
         display: block;
             
@@ -52,10 +47,6 @@
         line-height: 1.2;
         letter-spacing: 0.28px;
     }
-
-    @media screen and (min-width: 768px) {
-        display: flex;
-    }
 }
 
 .nav__item {
@@ -73,17 +64,4 @@
     height: 4px;
     border-radius: 2px;
     background: $color-accent;
-}
-
-// Стилизация кнопки меню для вьюпортов менее 767 пикселей
-.nav-button {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background-color: transparent;
-
-    @media screen and (min-width: 768px) {
-        display: none;
-    }
 }

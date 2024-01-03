@@ -1,0 +1,50 @@
+// Стилизация секции advantages
+.visually__hidden {
+    position: fixed;
+    transform: scale(0);
+}
+
+.advantages {
+    background-color: $bkg-color;
+    padding-top: 94px;
+    padding-bottom: 0px;
+}
+
+.advantages__block {
+    display: flex;
+    justify-items: space-between;
+}
+
+.advantages__item {
+    width: 270px;
+    margin-right: 30px;
+    justify-content: space-between;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.advantages__background {
+    display: flex;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: $bkg-aux;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon__attention,
+.icon__punctuality,
+.icon__plan,
+.icon__tech {
+    fill: $color-header;
+}
+
+.advantages__h3 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}

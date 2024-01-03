@@ -1,0 +1,62 @@
+// Стилизация главной секции
+.main__section {
+    color: $color-white;
+    background-color: $bkg-header;
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.40),
+            rgba(47, 48, 58, 0.40)),
+        url(../images/main-img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// Стилизация контейнера главной секции
+.main__section {
+    .container {
+        width: 698px;
+    }
+}
+
+// Стилизация заголовка главной секции
+.main__header {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.36;
+    letter-spacing: 2.64px;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+// Стиль для кнопки в первой секции
+.main__button {
+    display: inline-block;
+
+    color: $color-white;
+    background-color: $color-accent;
+
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.87x;
+    letter-spacing: 0.96px;
+
+    border-radius: 4px;
+    border: 0px;
+    padding: 10px 32px;
+    min-width: 216px;
+
+    &:active {
+        color: $color-accent;
+        background-color: $color-white;
+    }
+}

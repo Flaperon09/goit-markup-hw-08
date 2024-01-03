@@ -1,16 +1,11 @@
 // Стилизация контактов
 .nav__contacts {
-
     display: flex;
     margin-left: auto;
     align-items: center;
     // Правый отступ для ссылок, кроме крайнего
     .nav__item:not(:last-child) {
         margin-right: 50px;
-    }
-
-    @media screen and (max-width: 767px) {
-        display: none;
     }
 }
 

@@ -1,0 +1,56 @@
+// Cтилизация секции team
+.team {
+    background-color: $bkg-aux;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.team__name {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.48px;
+}
+
+.team__label {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.team__members {
+    display: flex;
+    text-align: center;
+}
+
+.team__element {
+    width: 270px;
+    margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.team__position {
+    font-size: 16px;
+    letter-spacing: 0.48px;
+    line-height: normal;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.team__card {
+    width: 270px;
+    height: 428px;
+
+    border-radius: 0px 0px 4px 4px;
+    background: $color-white;
+
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.team__h2 {
+    @extend .work__h2;
+}
