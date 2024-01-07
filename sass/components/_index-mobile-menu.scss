@@ -1,0 +1,215 @@
+// Стили для скрипта
+.menu-toggle {
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+}
+
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+    background-color: $color-white;
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: calc(50% - 240px);
+    width: 480px;
+    height: 796px;
+    padding: 48px 40px;
+    background-color: $color-white;
+    z-index: 999;
+
+    transform: translateY(-100%);
+    transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+    transform: translateY(0);
+}
+
+.menu-container .menu-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: $color-white;
+}
+
+.mobile-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.mobile-menu .link {
+    display: block;
+    padding: 10px;
+    color: $color-white;
+    text-decoration: none;
+}
+
+.nav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+// Стилизация пунктов меню мобильной версии
+.menu__element {
+    display: block;
+    text-align: left;
+
+    a {
+        display: block;
+
+        color: $color-header;
+        text-decoration: none;
+
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.8px;
+
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    & a:hover,
+    & a:focus,
+    & a.menu__current {
+        color: $color-accent;
+    }
+}
+
+.menu__item {
+    position: relative;
+
+    // Нижние отступы между пунктами меню, кроме крайнего
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.menu-nav {
+    margin-bottom: 302px;
+}
+
+// Стилизация контактов мобильного меню
+.menu__contacts {
+    text-align: left;
+}
+
+.menu-contacts {
+    margin-bottom: 64px;
+}
+
+.menu__phone {
+    margin-bottom: 32px;
+
+    & a {
+        color: $color-accent;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.68px;
+    }
+}
+
+.menu__email {
+
+    & a {
+        color: $color;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.48px;
+    }
+}
+
+// Стилизация списка соцсетей мобильного меню
+.menu__social {
+    display: flex;
+    justify-content: left;
+    padding: 0;
+}
+
+.menu__box {
+    display: block;
+    height: 22px;
+    align-items: flex-start;
+
+    &:not(:last-child) {
+        padding-right: 10px;
+        border-right: 1px solid $color-input;
+    }
+
+    &:not(:first-child) {
+        margin-left: 10px;
+    }
+}
+
+.menu__bottom {
+    display: block;
+    color: $color-accent;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.22;
+    letter-spacing: 0.36px;
+}
+
+// Стилизация кнопки закрытия меню мобильной версии
+.menu-toggle.js-close-menu {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+    border: 0px;
+    background-color: $color-white;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+
+    &:focus .icon__close,
+    &:hover .icon__close {
+        fill: $color-accent;
+    }
+}
+
+.icon__close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 0;
+    fill: $color-logo;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        fill: $color-accent;
+    }
+}

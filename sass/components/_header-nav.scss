@@ -63,6 +63,10 @@
 
 .nav__item {
     position: relative;
+
+    & .nav__link {
+        padding: 0;
+    }
 }
 
 // Стилизация линии подчеркивания активного пункта меню
@@ -76,49 +80,4 @@
     height: 4px;
     border-radius: 2px;
     background: $color-accent;
-}
-
-// Стилизация кнопки меню для вьюпортов менее 767 пикселей
-.nav-button {
-    display: block;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background-color: transparent;
-
-    @media screen and (min-width: 768px) {
-        display: none;
-    }
-}
-
-.nav-button .icon-cross {
-    display: none;
-}
-
-.nav-button.is-open .icon-cross {
-    display: block;
-}
-
-.nav-button.is-open .icon-menu {
-    display: none;
-}
-
-// Стилизация выпадающего меню мобильной версии
-.menu-container {
-    position: absolute;
-    display: none;
-
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 796px;
-
-    background-color: aqua;
-    padding: 20px;
-    text-align: center;
-    font-style: 20px;
-
-    &.is-open {
-        display: block;
-    }
 }

@@ -5,10 +5,21 @@
 .footer__submit {
     display: block;
     margin-left: 93px;
+
+    @media screen and (max-width:1199px) {
+        display: block;
+        width: 450px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
 .footer__email {
     display: flex;
+
+    @media screen and (max-width:1199px) {
+        display: block;
+    }
 }
 
 .footer__input {
@@ -29,6 +40,15 @@
     padding-top: 15px;
     padding-bottom: 15px;
     margin: 0;
+
+    @media screen and (max-width:1199px) {
+        display: block;
+        width: 450px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 20px;
+        
+    }
 }
 
 .footer__button {
@@ -57,6 +77,10 @@
     &:active {
         background-color: $color-white;
         color: $color-accent;
+    }
+    @media screen and (max-width:1199px) {
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 

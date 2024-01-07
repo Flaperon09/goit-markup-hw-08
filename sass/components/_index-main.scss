@@ -13,16 +13,75 @@
     background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.40),
             rgba(47, 48, 58, 0.40)),
-        url(../images/main-img.jpg);
+            url(../images/header-desktop-img.jpg); // Фон 1х для desktop
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    // Фон 2х для desktop
+    @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right,
+                            rgba(47, 48, 58, 0.40),
+                            rgba(47, 48, 58, 0.40)),
+                            url(../images/header-desktop-img@2x.jpg);
+            }
+
+    @media screen and (max-width: 767px) {
+        max-width: 480px;
+        height: 400px;
+        padding: 118px 60px;
+
+        background-image: linear-gradient(to right,
+                        rgba(47, 48, 58, 0.40),
+                        rgba(47, 48, 58, 0.40)),
+                        url(../images/header-phone-img.jpg); // Фон 1х для phone
+
+        // Фон 2х для phone
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(to right,
+                                rgba(47, 48, 58, 0.40),
+                                rgba(47, 48, 58, 0.40)),
+                                url(../images/header-phone-img@2x.jpg);
+            }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        max-width: 768px;
+        height: 400px;
+        padding: 118px 204px;
+
+        background-image: linear-gradient(to right,
+                        rgba(47, 48, 58, 0.40),
+                        rgba(47, 48, 58, 0.40)),
+                        url(../images/header-tablet-img.jpg); // Фон 1х для tablet
+        
+        // Фон 2х для tablet
+        @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: linear-gradient(to right,
+                                rgba(47, 48, 58, 0.40),
+                                rgba(47, 48, 58, 0.40)),
+                                url(../images/header-tablet-img@2x.jpg);
+            }
+    }
+        
 }
 
 // Стилизация контейнера главной секции
 .main__section {
     .container {
         width: 698px;
+
+        @media screen and (max-width:1199px) {
+            width: 360px;
+            height: 164px;
+            padding: 0;
+        }
     }
 }
 
@@ -35,6 +94,12 @@
     text-transform: uppercase;
     margin-top: 0px;
     margin-bottom: 30px;
+
+    @media screen and (max-width:1199px) {
+        font-size: 26px;
+        line-height: 1.61;
+        letter-spacing: 1.56px;
+    }
 }
 
 // Стиль для кнопки в первой секции
