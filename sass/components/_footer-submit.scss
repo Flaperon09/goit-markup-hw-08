@@ -6,7 +6,14 @@
     display: block;
     margin-left: 93px;
 
-    @media screen and (max-width:1199px) {
+    @media screen and (max-width:479px) {
+        display: block;
+        width: 300px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @media screen and (min-width:480px) and (max-width:1199px) {
         display: block;
         width: 450px;
         margin-right: auto;
@@ -41,7 +48,15 @@
     padding-bottom: 15px;
     margin: 0;
 
-    @media screen and (max-width:1199px) {
+    @media screen and (max-width:479px) {
+        display: block;
+        width: 300px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width:480px) and (max-width:1199px) {
         display: block;
         width: 450px;
         margin-right: auto;

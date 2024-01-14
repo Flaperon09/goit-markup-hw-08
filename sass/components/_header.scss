@@ -7,5 +7,12 @@
         position: relative;
         display: flex;
         align-items: center;
+
+        @media screen and (max-width: 767px) {
+            height: 60px;
+        }
+    }
+    @media screen and (min-width:1200px) {
+        min-width: 1200px;
     }
 }

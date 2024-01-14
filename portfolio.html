@@ -25,6 +25,85 @@
           <a href="./index.html" class="header__logo list">
             <span class="header__logo__start">Web</span>Studio
           </a>
+          <!-- Кнопка открытия мобильного меню -->
+          <!-- <button type="button" class="nav-button is-open" data-menu-button> -->
+          <button type="button" class="menu-toggle js-open-menu">
+            <svg
+              role="img"
+              width="40px"
+              height="40px"
+              aria-expanded="false"
+              aria-label="Переключатель мобильного меню"
+              aria-controls="mobile-menu"
+            >
+              <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+              <!-- <use
+                class="icon-cross"
+                href="./images/icons.svg#icon-cross"
+              ></use> -->
+            </svg>
+          </button>
+          <!-- Меню для мобильной версии -->
+          <!-- <div class="menu-container is-open" id="mobile-menu" data-menu> -->
+          <div class="menu-container js-menu-container" id="mobile-menu">
+            <div class="menu__content">
+              <div class="menu-nav">
+                <ul class="menu__element list">
+                  <li class="menu__item">
+                    <a href="./index.html">Студія</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="./portfolio.html" class="menu__current"
+                      >Портфоліо</a
+                    >
+                  </li>
+                  <li class="menu__item"><a href="">Контакти</a></li>
+                </ul>
+              </div>
+              <div>
+                <div class="menu-contacts">
+                  <ul class="menu__contacts list">
+                    <li class="menu__phone">
+                      <a href="tel:+380961111111" class="menu__link list">
+                        +38 096 111 11 11
+                      </a>
+                    </li>
+                    <li class="menu__email">
+                      <a
+                        href="mailto:info@devstudio.com"
+                        class="menu__link list"
+                      >
+                        info@devstudio.com
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menu-social">
+                  <ul class="menu__social">
+                    <li class="menu__box">
+                      <a href="" class="menu__bottom list">Instagram</a>
+                    </li>
+                    <li class="menu__box">
+                      <a href="" class="menu__bottom list">Twitter</a>
+                    </li>
+                    <li class="menu__box">
+                      <a href="" class="menu__bottom list">Facebook</a>
+                    </li>
+                    <li class="menu__box">
+                      <a href="" class="menu__bottom list">LinkedIn</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Кнопка закрытия мобильного меню -->
+            <!-- <button class="menu__close"> -->
+            <button class="menu-toggle js-close-menu">
+              <svg class="icon__close js-close-menu" width="40px" height="40px">
+                <use href="./images/icons.svg#icon-cross"></use>
+              </svg>
+            </button>
+          </div>
           <ul class="nav__element list">
             <li class="nav__item">
               <a href="./index.html">Студія</a>
@@ -82,12 +161,43 @@
             <li class="projects__card">
               <a href="" class="projects__link">
                 <div class="box__img">
-                  <img
+                  <picture class="projects__img">
+                    <source
+                      srcset="
+                        ./images/notebook-desktop.jpg    1x,
+                        ./images/notebook-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/notebook-tablet.jpg    1x,
+                        ./images/notebook-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px) and (max-width:1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/notebook-phone.jpg    1x,
+                        ./images/notebook-phone@2x.jpg 2x
+                      "
+                      media="(min-width: 480px) and (max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/notebook-phone@075x.jpg 1x,
+                        ./images/notebook-phone@15x.jpg  2x
+                      "
+                      media="(max-width: 479px)"
+                    />
+                    <img src="./images/notebook-phone.jpg" />
+                  </picture>
+                  <!-- <img
                     src="./images/notebook.jpg"
                     class="projects__img"
                     alt="Ноутбук"
                     width="370"
-                  />
+                  /> -->
                   <p class="projects__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Beatae id neque voluptatem vel excepturi corrupti, pariatur,
@@ -95,7 +205,7 @@
                     eius hic vero!
                   </p>
                 </div>
-                <div class="projects__label">
+                <div class="projects__label first">
                   <h2 class="projects__h2">Технокряк</h2>
                   <p class="projects__chapter">Веб-сайт</p>
                 </div>
@@ -104,12 +214,43 @@
             <li class="projects__card">
               <a href="" class="projects__link">
                 <div class="box__img">
-                  <img
+                  <picture class="projects__img">
+                    <source
+                      srcset="
+                        ./images/basketball-desktop.jpg    1x,
+                        ./images/basketball-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/basketball-tablet.jpg    1x,
+                        ./images/basketball-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px) and (max-width:1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/basketball-phone.jpg    1x,
+                        ./images/basketball-phone@2x.jpg 2x
+                      "
+                      media="(min-width: 480px) and (max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/basketball-phone@075x.jpg 1x,
+                        ./images/basketball-phone@15x.jpg  2x
+                      "
+                      media="(max-width: 479px)"
+                    />
+                    <img src="./images/basketball-phone.jpg" />
+                  </picture>
+                  <!-- <img
                     src="./images/basketball.jpg"
                     class="projects__img"
                     alt="Баскетбол"
                     width="370"
-                  />
+                  /> -->
                   <p class="projects__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Beatae id neque voluptatem vel excepturi corrupti, pariatur,
@@ -126,12 +267,43 @@
             <li class="projects__card">
               <a href="" class="projects__link">
                 <div class="box__img">
-                  <img
+                  <picture class="projects__img">
+                    <source
+                      srcset="
+                        ./images/logo-desktop.jpg    1x,
+                        ./images/logo-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/logo-tablet.jpg    1x,
+                        ./images/logo-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px) and (max-width:1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/logo-phone.jpg    1x,
+                        ./images/logo-phone@2x.jpg 2x
+                      "
+                      media="(min-width: 480px) and (max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/logo-phone@075x.jpg 1x,
+                        ./images/logo-phone@15x.jpg  2x
+                      "
+                      media="(max-width: 479px)"
+                    />
+                    <img src="./images/logo-phone.jpg" />
+                  </picture>
+                  <!-- <img
                     src="./images/logo.jpg"
                     class="projects__img"
                     alt="Логотип"
                     width="370"
-                  />
+                  /> -->
                   <p class="projects__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Beatae id neque voluptatem vel excepturi corrupti, pariatur,
@@ -148,19 +320,49 @@
             <li class="projects__card">
               <a href="" class="projects__link">
                 <div class="box__img">
-                  <img
+                  <picture class="projects__img">
+                    <source
+                      srcset="
+                        ./images/headphones-desktop.jpg    1x,
+                        ./images/headphones-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/headphones-tablet.jpg    1x,
+                        ./images/headphones-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px) and (max-width:1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/headphones-phone.jpg    1x,
+                        ./images/headphones-phone@2x.jpg 2x
+                      "
+                      media="(min-width: 480px) and (max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/headphones-phone@075x.jpg 1x,
+                        ./images/headphones-phone@15x.jpg  2x
+                      "
+                      media="(max-width: 479px)"
+                    />
+                    <img src="./images/headphones-phone.jpg" />
+                  </picture>
+                  <!-- <img
                     src="./images/headphones.jpg"
-                    alt="Наушники"
+                    class="projects__img"
+                    alt="Логотип"
                     width="370"
-                  />
-                  <div class="projects__img">
-                    <p class="projects__text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Beatae id neque voluptatem vel excepturi corrupti,
-                      pariatur, aut, a at sit qui quod tempora. Quis quo, totam
-                      consectetur eius hic vero!
-                    </p>
-                  </div>
+                  /> -->
+                  <p class="projects__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Beatae id neque voluptatem vel excepturi corrupti, pariatur,
+                    aut, a at sit qui quod tempora. Quis quo, totam consectetur
+                    eius hic vero!
+                  </p>
                 </div>
                 <div class="projects__label">
                   <h2 class="projects__h2">Проєкт Prime</h2>
@@ -171,12 +373,43 @@
             <li class="projects__card">
               <a href="" class="projects__link">
                 <div class="box__img">
-                  <img
+                  <picture class="projects__img">
+                    <source
+                      srcset="
+                        ./images/boxes-desktop.jpg    1x,
+                        ./images/boxes-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/boxes-tablet.jpg    1x,
+                        ./images/boxes-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px) and (max-width:1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/boxes-phone.jpg    1x,
+                        ./images/boxes-phone@2x.jpg 2x
+                      "
+                      media="(min-width: 480px) and (max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/boxes-phone@075x.jpg 1x,
+                        ./images/boxes-phone@15x.jpg  2x
+                      "
+                      media="(max-width: 479px)"
+                    />
+                    <img src="./images/boxes-phone.jpg" />
+                  </picture>
+                  <!-- <img
                     src="./images/boxes.jpg"
                     class="projects__img"
                     alt="Коробки"
                     width="370"
-                  />
+                  /> -->
                   <p class="projects__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Beatae id neque voluptatem vel excepturi corrupti, pariatur,
@@ -193,12 +426,43 @@
             <li class="projects__card">
               <a href="" class="projects__link">
                 <div class="box__img">
-                  <img
+                  <picture class="projects__img">
+                    <source
+                      srcset="
+                        ./images/monitor-desktop.jpg    1x,
+                        ./images/monitor-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/monitor-tablet.jpg    1x,
+                        ./images/monitor-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px) and (max-width:1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/monitor-phone.jpg    1x,
+                        ./images/monitor-phone@2x.jpg 2x
+                      "
+                      media="(min-width: 480px) and (max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/monitor-phone@075x.jpg 1x,
+                        ./images/monitor-phone@15x.jpg  2x
+                      "
+                      media="(max-width: 479px)"
+                    />
+                    <img src="./images/monitor-phone.jpg" />
+                  </picture>
+                  <!-- <img
                     src="./images/monitor.jpg"
                     class="projects__img"
                     alt="Монитор"
                     width="370"
-                  />
+                  /> -->
                   <p class="projects__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Beatae id neque voluptatem vel excepturi corrupti, pariatur,
@@ -215,12 +479,43 @@
             <li class="projects__card">
               <a href="" class="projects__link">
                 <div class="box__img">
-                  <img
+                  <picture class="projects__img">
+                    <source
+                      srcset="
+                        ./images/book-desktop.jpg    1x,
+                        ./images/book-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/book-tablet.jpg    1x,
+                        ./images/book-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px) and (max-width:1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/book-phone.jpg    1x,
+                        ./images/book-phone@2x.jpg 2x
+                      "
+                      media="(min-width: 480px) and (max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/book-phone@075x.jpg 1x,
+                        ./images/book-phone@15x.jpg  2x
+                      "
+                      media="(max-width: 479px)"
+                    />
+                    <img src="./images/book-phone.jpg" />
+                  </picture>
+                  <!-- <img
                     src="./images/book.jpg"
                     class="projects__img"
                     alt="Книга"
                     width="370"
-                  />
+                  /> -->
                   <p class="projects__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Beatae id neque voluptatem vel excepturi corrupti, pariatur,
@@ -237,12 +532,43 @@
             <li class="projects__card">
               <a href="" class="projects__link">
                 <div class="box__img">
-                  <img
+                  <picture class="projects__img">
+                    <source
+                      srcset="
+                        ./images/label-desktop.jpg    1x,
+                        ./images/label-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/label-tablet.jpg    1x,
+                        ./images/label-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px) and (max-width:1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/label-phone.jpg    1x,
+                        ./images/label-phone@2x.jpg 2x
+                      "
+                      media="(min-width: 480px) and (max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/label-phone@075x.jpg 1x,
+                        ./images/label-phone@15x.jpg  2x
+                      "
+                      media="(max-width: 479px)"
+                    />
+                    <img src="./images/label-phone.jpg" />
+                  </picture>
+                  <!-- <img
                     src="./images/label.jpg"
                     class="projects__img"
                     alt="Бирка"
                     width="370"
-                  />
+                  /> -->
                   <p class="projects__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Beatae id neque voluptatem vel excepturi corrupti, pariatur,
@@ -259,12 +585,43 @@
             <li class="projects__card">
               <a href="" class="projects__link">
                 <div class="box__img">
-                  <img
+                  <picture class="projects__img">
+                    <source
+                      srcset="
+                        ./images/business-desktop.jpg    1x,
+                        ./images/business-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/business-tablet.jpg    1x,
+                        ./images/business-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px) and (max-width:1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/business-phone.jpg    1x,
+                        ./images/business-phone@2x.jpg 2x
+                      "
+                      media="(min-width: 480px) and (max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/business-phone@075x.jpg 1x,
+                        ./images/business-phone@15x.jpg  2x
+                      "
+                      media="(max-width: 479px)"
+                    />
+                    <img src="./images/business-phone.jpg" />
+                  </picture>
+                  <!-- <img
                     src="./images/business.jpg"
                     class="projects__img"
                     alt="Бизнес"
                     width="370"
-                  />
+                  /> -->
                   <p class="projects__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Beatae id neque voluptatem vel excepturi corrupti, pariatur,
@@ -353,5 +710,14 @@
         </form>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
